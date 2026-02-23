@@ -1,17 +1,21 @@
+﻿/* ==========================================
+   Muhammad Kashif - Academic Portfolio CSS
+   ========================================== */
+
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+/* ---- Profile Picture ---- */
 .profile-pic {
   position: relative;
-  max-width:130px;
-  max-height:130px;
+  max-width: 130px;
+  max-height: 130px;
   width: auto;
   height: auto;
   overflow: hidden;
-  /* display: inline-block; */
-  
-  
-  /* background-size: cover;  */
-  margin: -31px; 
-  margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
+  margin: -31px;
+  margin-left: -7px;
+  border: 5px solid rgba(0, 77, 64, 0.35);
   border-radius: 50% !important;
 }
 
@@ -20,20 +24,11 @@
   height: auto;
 }
 
-.tracker {
-  /* visibility: hidden; */
-  position: fixed;
-  /* margin-inline-end: auto;  */
-  bottom: 0; 
-  right: 0;
-}
-
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+/* ---- Social Icon Buttons ---- */
 .social {
   margin: 0 auto;
   width: auto;
   text-align: inherit;
-  /* padding: 10px; */
 }
 
 .icon-btn {
@@ -44,61 +39,51 @@
   color: #FFFFFF;
   cursor: pointer;
   font-size: 30px;
-  line-height: 70px;
+  line-height: 50px;
   border-radius: 45px;
   display: inline-block;
   margin: 4px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.github {
-  color: black;
-}
-
-.linkedin {
-  color: #0077b5;
-}
-
-.angellist {
-  color: grey;
-}
+.github { color: #333; }
+.linkedin { color: #0077b5; }
+.scholar { color: #4285f4; }
+.researchgate { color: #00d0af; }
+.orcid { color: #a6ce39; }
+.scopus { color: #e9711c; }
 
 .icon-btn:hover {
-  transform: scale(1.10);
+  transform: scale(1.12);
   color: #FFFFFF;
 }
 
-.linkedin:hover {
-  background-color: #0077b5;
-}
+.linkedin:hover { background-color: #0077b5; }
+.github:hover { background-color: #333; }
+.scholar:hover { background-color: #4285f4; }
+.researchgate:hover { background-color: #00d0af; }
+.orcid:hover { background-color: #a6ce39; }
+.scopus:hover { background-color: #e9711c; }
 
-.angellist:hover {
-  background-color: grey;
-}
-
-.github:hover {
-  background-color: black;
-}
-
-/* Buttons - Read Me, Contact Us */
-
+/* ---- Buttons - Read Me, Contact ---- */
 .readme {
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #00796b;
+  color: #00695c;
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-/* .readme:hover{
-  color: white;
-  background-color: #00796b;
-} */
+.readme:hover {
+  color: #fff;
+  background-color: #00695c;
+}
 
 .contactme {
   position: relative;
@@ -111,48 +96,31 @@
   letter-spacing: 1px;
   display: inline-block;
   margin-top: 1.5em;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
-.contactme:hover{
-  color: #00796b;
+.contactme:hover {
+  color: #00695c;
   background-color: white;
 }
-/* main body */
 
-/* body-color */
-
+/* ---- Body ---- */
 body {
   color: #333;
-  font-size: 18px;
+  font-size: 17px;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.7;
 }
-
-/* body {
-  color: black;
-  font-size: 18px;
-} */
-
-/* main a -- links */
-
-/* a {
-  color: #009688;
-} */
 
 a {
   color: #004d40;
+  transition: color 0.2s ease;
 }
 
-/* main blockqoute */
-
-/* blockquote {
-  border-left: 5px solid #795548;
-  color: #795548;
-  font-size: 125%;
-  font-weight: 400;
-  margin: 20px 0;
-  padding-left: 1.5rem;
-} */
+a:hover {
+  color: #00796b;
+}
 
 blockquote {
   border-left: 5px solid #795548;
@@ -172,32 +140,18 @@ blockquote * {
   text-align: center;
 }
 
-/* main nav */
-
+/* ---- Navigation ---- */
 nav {
   background: white;
   box-shadow: none;
   height: 0;
 }
 
-/* nav {
-  background: rgb(149, 126, 212);
-  box-shadow: none;
-  height: 0;
-} */
-
 nav i {
   padding: 0 15px;
   position: relative;
   top: 5px;
 }
-
-/* main */
-
-/* main {
-  background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
-} */
 
 main {
   background: url(../../assets/img/bg.png) repeat;
@@ -227,34 +181,19 @@ ul.side-nav li {
   padding: 0;
 }
 
-/* ul.side-nav.fixed a {
-  box-sizing: content-box;
-  color: rgb(48, 122, 207);
-  display: block;
-  line-height: 100%;
-  padding: 10px 0 12px;
-} */
-
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  color: #00695c;
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
 }
 
-ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
+ul.table-of-contents li.logo a.active,
+ul.table-of-contents li.logo a:hover {
   border: none;
   font-weight: 200;
 }
-
-/* ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
-} */
 
 ul.side-nav.fixed li.logo {
   background-color: #fafafa;
@@ -269,12 +208,14 @@ ul.side-nav.fixed li.logo a {
   line-height: 100%;
 }
 
-ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
+ul.table-of-contents li:not(.logo) a.active,
+ul.table-of-contents li:not(.logo) a:hover {
   background-color: #fafafa;
   border-left: 3px solid;
 }
 
-ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
+ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
+ul#slide-out li:not(.logo) a span {
   color: #333 !important;
 }
 
@@ -294,12 +235,15 @@ li.logo span {
   width: 95%;
 }
 
+/* ---- Section Headings ---- */
 h3 {
-  font-weight: 200;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
   margin-bottom: 60px;
   margin-top: 0;
   padding: 30px 40px;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .section {
@@ -312,15 +256,9 @@ h3 {
   height: 100vh;
 }
 
-/* Original */
-
-/* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
-  position: relative;
-} */
-
+/* ---- Hero / Intro Section ---- */
 #intro.section {
-  background: #a7ffeb repeat;
+  background: linear-gradient(135deg, #004d40 0%, #00897b 50%, #26a69a 100%);
   position: relative;
 }
 
@@ -332,31 +270,24 @@ h3 {
   top: 0;
 }
 
-/* #intro.section .container *:not(span) {
-  font-weight: 300;
-  line-height: 150%;
-  padding: 0 30px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
-
 #intro.section .container *:not(span) {
   font-weight: 300;
-  /* font-weight: 400; */
   line-height: 150%;
-  /* padding: 0 0px; */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-#intro.section .underline {
-  border-bottom: 5px solid #24305e;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
 #intro.section .teal {
   padding: 0 10px;
 }
 
+#intro h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.35);
   height: 100%;
   left: 0;
   position: absolute;
@@ -364,21 +295,19 @@ h3 {
   width: 100%;
 }
 
-.waves-effect.waves-blue .waves-ripple {
-  /* The alpha value allows the text and background color
-   of the button to still show through. */
-  background-color: rgba(33, 150, 243, 0.2);
-}
-
+/* ---- Cards ---- */
 .card {
   margin-bottom: 60px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .card .role {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   position: absolute;
   right: 38px;
   top: 35px;
+  font-weight: 600;
 }
 
 .card li a {
@@ -447,7 +376,9 @@ h3 {
 }
 
 .card .card-title {
-  font-size: 24px;
+  font-size: 22px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
 }
 
 .card .card-content .card-title {
@@ -458,24 +389,18 @@ h3 {
   margin-left: 10px;
 }
 
+/* ---- Hover Underline Links ---- */
 a.hoverline {
   border-bottom: 3px solid transparent !important;
   padding: 3px 3px 0 3px;
   transition: 0.25s all;
-  -moz-transition: 0.25s all;
-  -webkit-transition: 0.25s all;
 }
-
-/* main a.hoverline */
-
-/* a.hoverline:hover {
-  border-bottom: 3px solid #24305e !important;
-} */
 
 a.hoverline:hover {
   border-bottom: 3px solid #004d40 !important;
 }
 
+/* ---- Skills Section ---- */
 #skills .card.large {
   height: 360px;
 }
@@ -484,6 +409,7 @@ a.hoverline:hover {
   border-bottom: 1px solid #ddd;
   margin-bottom: 30px;
   padding-bottom: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #skills .col img.responsive-img {
@@ -546,26 +472,218 @@ small {
   color: #666 !important;
 }
 
-/* main .teal-text */
-
 .teal-text {
-  color: #008073 !important;
+  color: #00695c !important;
 }
-
-/* .teal-text {
-  color: #0b5e86 !important;
-} */
-
-/* .teal */
 
 .teal {
-  background-color: #008073 !important;
+  background-color: #00695c !important;
 }
 
-/* .teal {
-  background-color: #00695c !important;
-} */
+/* ==========================================
+   Publications Section
+   ========================================== */
+.publication-card {
+  margin-bottom: 20px;
+  border-left: 4px solid #00695c;
+}
 
+.publication-card .card-content {
+  padding: 20px 25px;
+}
+
+.pub-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-top: 8px !important;
+  color: #333;
+}
+
+.badge-label {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 6px;
+}
+
+.badge-label.first-author {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.badge-label.co-author {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #90caf9;
+}
+
+.badge-label.published {
+  background-color: #e0f2f1;
+  color: #00695c;
+  border: 1px solid #80cbc4;
+}
+
+.badge-label.presented {
+  background-color: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffcc80;
+}
+
+.badge-label.under-review {
+  background-color: #fce4ec;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.badge-label.submitted-label {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+  border: 1px solid #ce93d8;
+}
+
+.badge-label.scopus-indexed {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #81c784;
+}
+
+.pub-meta {
+  font-size: 0.92rem;
+  color: #666;
+  margin-top: 6px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.citation-count {
+  font-weight: 600;
+  color: #00695c;
+}
+
+/* ---- Metrics Card ---- */
+.metrics-card {
+  background: linear-gradient(135deg, #004d40 0%, #00695c 100%);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.metrics-card .card-content {
+  padding: 25px 20px 15px;
+}
+
+.metric-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.metrics-card .text-center {
+  text-align: center;
+}
+
+.metrics-card p a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: underline;
+}
+
+.metrics-card p a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================
+   Training Section
+   ========================================== */
+.training-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.training-list li {
+  list-style-type: none !important;
+  margin-left: 0 !important;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.training-list li:last-child {
+  border-bottom: none;
+}
+
+.training-list li i {
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+/* ==========================================
+   Research Interests List
+   ========================================== */
+.research-interests {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.research-interests li {
+  list-style-type: none !important;
+  margin-left: 0 !important;
+  padding: 6px 0;
+  font-size: 17px;
+}
+
+.research-interests li i {
+  margin-right: 10px;
+}
+
+/* ==========================================
+   Chip Tags (Domain Expertise)
+   ========================================== */
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.chip-tag {
+  display: inline-block;
+  background-color: #e0f2f1;
+  color: #00695c;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #b2dfdb;
+  transition: all 0.2s ease;
+}
+
+.chip-tag:hover {
+  background-color: #00695c;
+  color: #fff;
+  border-color: #00695c;
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
 @media (min-width: 1200px) {
   #experience .container {
     width: 860px;
@@ -591,34 +709,42 @@ small {
     padding-left: 0px;
     padding-top: 64px;
   }
+
   ul.side-nav a {
     line-height: 100%;
     padding: 0;
     width: 100%;
   }
+
   nav {
     background: #fff;
     height: 64px;
     position: absolute;
   }
-  nav a.button-collapse, nav a.button-collapse i {
-    color: #009688;
+
+  nav a.button-collapse,
+  nav a.button-collapse i {
+    color: #00695c;
     height: 56px;
     line-height: 56px;
   }
+
   h3 {
     padding: 20px 30px;
     margin-bottom: 40px;
   }
+
   .container {
     margin: 0 auto;
   }
+
   nav.hide-on-large.only.trigger {
     display: block;
     position: fixed;
     top: 0;
     z-index: 2;
   }
+
   .name-title {
     display: block;
     height: 100%;
@@ -627,25 +753,33 @@ small {
     width: 100%;
     position: absolute;
   }
-  .name-title>span, .name-title>a {
+
+  .name-title > span,
+  .name-title > a {
     position: relative;
     line-height: 20px;
   }
+
   .name-title a {
     font-size: 22px;
     display: block;
   }
+
   .name-title span {
     display: block;
     font-size: 14px;
   }
-  h3, .container {
+
+  h3,
+  .container {
     position: relative;
     top: 64px;
   }
+
   section#intro {
     margin-bottom: -64px;
   }
+
   .card .role {
     position: relative;
     right: initial;
@@ -659,36 +793,71 @@ small {
     line-height: 200%;
     margin: 30px 0 0;
   }
+
   #intro.section .container *:not(span) {
     padding: 0;
   }
+
   .card .card-content .card-title {
     font-size: 20px;
     line-height: 24px;
   }
+
   #experience span.card-title {
     text-align: center;
     display: block;
   }
+
   #experience span.card-title a {
     margin: 0;
   }
+
   i.mdi-navigation-close.right {
     position: relative;
     bottom: 15px;
   }
+
   #contact a:not(.btn-floating) {
     text-align: center;
     display: block;
     left: initial;
     bottom: initial;
   }
+
   #contact a.btn-floating.btn-large {
     display: block;
     text-align: center;
     margin: 0 auto;
   }
+
   #intro.section {
     background-position-x: 30%;
+  }
+
+  .chip-tag {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
+
+/* ==========================================
+   Academicons sizing
+   ========================================== */
+.ai {
+  font-size: inherit;
+}
+
+/* ==========================================
+   Print Styles for CV
+   ========================================== */
+@media print {
+  nav, .overlay, .social, .buttons {
+    display: none !important;
+  }
+  main {
+    padding-left: 0 !important;
+  }
+  .section {
+    page-break-inside: avoid;
   }
 }
